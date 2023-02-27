@@ -1,5 +1,5 @@
-FROM eclipse-temurin:19
-WORKDIR /app
-COPY target/*.jar /app/sem-coursework-be.jar
-ENTRYPOINT ["java", "-jar", "sem-coursework-be.jar"]
+FROM openjdk:latest
+COPY ./target/seMethods-0.1.0.1-jar-with-dependencies.jar /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java", "-jar", "seMethods-0.1.0.1-jar-with-dependencies.jar"]
 
